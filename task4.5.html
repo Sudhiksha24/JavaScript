@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<title>My Web Page</title>
+<body>
+<script>
+function step1() {
+return new Promise((resolve) => {
+console.log("Step 1: Fetching user data...");
+setTimeout(() => resolve({ userId: 1, name: "Sudhi" }),
+1000);
+});
+}
+function step2(user) {
+return new Promise((resolve) => {
+console.log("Step 2: Fetching user posts...");
+setTimeout(() => resolve([{ id: 1, title: "Post 1" }, { id:
+2, title: "Post 2" }]), 1000);
+});
+}
+function step3(posts) {
+return new Promise((resolve) => {
+console.log("Step 3: Saving posts...");
+setTimeout(() => resolve(" saved successfully!"), 1000);
+});
+}
+step1().then(user => {
+console.log("User data:", user);
+return step2(user);
+})
+.then(posts => {
+console.log("User's posts:", posts);
+return step3(posts);
+})
+.then(message => {
+console.log(message);
+})
+.catch(error => {
+console.error("Error:", error);
+});
+</script>
+</body>
+</html>
