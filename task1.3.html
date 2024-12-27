@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Web Page</title>
+</head>
+<body>
+<script>
+function Steps(a) {
+if (a == 0) return 1;
+else if (a < 0) return 0;
+else return Steps(a - 1) + Steps(a - 2) + Steps(a - 3);
+}
+var b = 7;
+var fact = Steps(b);
+console.log("Total no of ways to Climb " + b + " staircase: " +
+fact);
+</script>
+</body>
+</html>
