@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Web Page</title>
+</head>
+<body>
+<script>
+function one(){
+return new Promise((resolve,reject)=>{
+resolve("Hello! "); });
+};
+function two(){
+return new Promise((resolve, reject)=>{
+resolve("KCE "); });
+};
+function three(){
+return new Promise((resolve, reject)=>{
+return setTimeout(()=>{
+resolve("Students!");
+}, 2000); });
+};
+async function promiseExecution(){
+let promise = await Promise.all([one(),two(),three()]);
+console.log(promise);
+};
+promiseExecution();
+</script>
+</body>
+</html>
