@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        My Web Page
+    </title>
+<body>
+    <script>
+       function factorial(a){
+        if(a==0) return 1;
+    else
+        return factorial(a-1)*a;
+       } 
+       var b=parseInt(prompt("Enter Number:"))
+       var fact=factorial(b);
+       console.log("Factorial of "+b+" is "+fact);
+    </script>
+</html>
