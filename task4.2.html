@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <title>My Web Page</title>
+  <body>
+    <script>
+        function fetchData(url) {
+            return fetch(url).then(response => response.json()).then(data => {
+                console.log('Fetched data:', data);
+                return data;
+            })
+           .then(data => {
+                const count = data.length;
+                console.log('Number of items:', count);
+            })
+            .catch(error => {
+                console.log('Error:', error);
+            });
+        }
+        const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+        fetchData(apiUrl);
+    </script>
+  </body>
+</html>
