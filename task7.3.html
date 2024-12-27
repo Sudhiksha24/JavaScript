@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Web Page</title>
+</head>
+<body>
+<p>Adding new HTML Element</p>
+<div id="d">
+<p id="p1">First Line</p>
+<p id="p2">Second Line</p>
+</div>
+<script>
+const a = document.createElement("p");
+const node = document.createTextNode("new line");
+a.appendChild(node);
+const ele = document.getElementById("d");
+ele.appendChild(a);
+</script>
+</body>
+</html>
