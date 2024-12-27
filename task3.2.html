@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+My Web Page
+</title>
+</head>
+<body>
+<script>
+function createCounter(){
+let a = 0;
+if(a==0)console.log("Count Variable is Created");
+return function(){
+a++;
+console.log(`Current count: ${a}`);
+};
+}
+const counter=createCounter();
+counter();
+counter();
+counter();
+</script>
+</body>
+</html>
