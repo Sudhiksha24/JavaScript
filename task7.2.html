@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Web Page</title>
+</head>
+<body>
+<form>
+<label>Enter Name:</label>
+<input type="text" id="nam" name="namm"><br>
+<input type="button" id="cal" value="Display"
+onclick="display()">
+<p id="numm"></p>
+</form>
+</body>
+<script>
+function display(){
+var name = document.getElementById("nam").value;
+document.getElementById("numm").innerHTML =
+document.write(`Hello! ${name}`);
+}
+</script>
+</html>
