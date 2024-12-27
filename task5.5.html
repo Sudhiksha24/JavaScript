@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<title>My Web Page</title>
+<body>
+<script>
+function asyncOperation(name, delay) {
+return new Promise(resolve => {
+setTimeout(() => {
+console.log(`${name} completed`);
+resolve(name);
+}, delay);
+});
+}
+async function main() {
+try {
+const results = await Promise.all([
+asyncOperation('Operation 1', 1000),
+asyncOperation('Operation 2', 2000)
+]);
+} catch (error) {
+console.error('Error occurred:', error.message);
+}
+}
+main();
+</script>
+</body>
+</html>
