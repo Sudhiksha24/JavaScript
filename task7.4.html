@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>My Web Page</title>
+</head>
+<body>
+<p id="m">KCE<br></p>
+<button onclick="toggleElement()">
+Click to Toggle
+</button>
+<script>
+function toggleElement(){
+const a=document.getElementById('m');
+const vi=window.getComputedStyle(a).visibility;
+if (vi==='hidden')
+a.style.visibility='visible';
+else
+a.style.visibility='hidden';
+}
+</script>
+</body>
+</html>
