@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+My Web Page
+</title>
+</head>
+<body>
+<script>
+function One(){
+var v1=11;
+return v1;
+}
+function Two(){
+var v1=One();
+var v2=7;
+console.log(v1);
+console.log(v2);
+var res=v2-v1;
+console.log('functional result: ' + res);
+}
+function sub(){
+return Two();
+}
+sub();
+</script>
+</body>
+</html>
