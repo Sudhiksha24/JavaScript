@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<title>My Web Page</title>
+<body>
+<script>
+function createCounter() {
+let count = 1;
+return {
+increment: function() {
+count++;
+},
+
+getCount: function() {
+return count;
+}
+};
+}
+const cnt1 = createCounter();
+const cnt2 = createCounter();
+cnt1.increment();
+cnt1.increment();
+console.log(cnt1.getCount());
+cnt2.increment();
+console.log(cnt2.getCount());
+</script>
+</body>
+</html>
