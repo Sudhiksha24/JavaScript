@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Web Page</title>
+</head>
+<body>
+<script>
+function PlaceFood(order){
+return new Promise((resolve)=>{
+setTimeout(()=>{
+console.log(`${order} Order Placed.`);
+resolve(order);
+},1000); }) }
+function DeleiverFood(order){
+return new Promise((resolve)=>{
+setTimeout(()=>{
+console.log(`${order} Order Delivered.`);
+resolve(`${order} Order Delivered.`);
+
+},1000); }) }
+async function orders(food){
+const orderss=await PlaceFood(food);
+const deliver=await DeleiverFood(orderss);
+document.write(status); }
+orders("Mushroom Biriyani");
+</script>
+</body>
+</html>
