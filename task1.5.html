@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+  <html>
+<head>
+<meta charset="utf-8">
+<title>
+My Web Page
+</title>
+</head>
+<body>
+<script>
+function towerOfHanoi(n, source, destination, auxiliary) {
+if (n === 1) {
+document.writeln(`Move disk 1 from ${source} to
+${destination}`, "<br>");
+return;
+}
+towerOfHanoi(n - 1, source, auxiliary, destination);
+document.writeln(`Move disk ${n} from ${source} to
+${destination}`, "<br>");
+towerOfHanoi(n - 1, auxiliary, destination, source);
+}
+const a = 3;
+towerOfHanoi(a, 'A', 'C', 'B');
+</script>
+</body>
+</html>
