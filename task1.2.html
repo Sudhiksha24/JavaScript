@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+My Web Page
+</title>
+</head>
+<body>
+<script>
+function fibonacci(a){
+if(a==0||a==1) return a;
+else
+return fibonacci(a-1)+fibonacci(a-2);
+}
+var b=parseInt(prompt("Enter Number:"))
+var fact=fibonacci(b);
+console.log(b+"th Fibonacci Number is "+fact);
+</script>
+<body>
+</html>
